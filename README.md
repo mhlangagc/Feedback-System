@@ -2,7 +2,7 @@
 
 An easy to implement custom pop up similar to Pinterest's Pop ups. 
 <div align="center">
-<img src="Pinterest.png" alt="demo"/>
+<img src="Pinterest.png" alt="Pinterest"/>
 </div>
 ---
 
@@ -14,10 +14,12 @@ This library will help easily set up any pop ups that appear from the bottom of 
 
 ##  Requirements :
 
+- Swift 3.0
+- XCode 8 (Beta)
+
 <p align="center">
 <img src="https://img.shields.io/badge/platform-iOS-blue.svg?style=flat" alt="Platform iOS" />
 <a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/Swift_3.0-compatible-4BC51D.svg?style=flat" alt="Swift 3.0 compatible" /></a>
-<a href="https://cocoapods.org"><img src='https://img.shields.io/cocoapods/v/TransEasy.svg' /></a>
 <a href="http://mit-license.org"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat" alt="MIT" /></a>
 
 
@@ -68,15 +70,21 @@ In this function we get access the the keyWindow  and use it’s frame to call t
 
 ##  Customisation
 
-The Pop up can be customised in the following ways. 
+```swift
+- func showPopUp(roundedViewBackgroundColor: UIColor, informationString : String, informationStringTextColor: UIColor, durationOnScreen: Double, currentView: UIView, showsBackgroundGradient: Bool, isAboveTabBar: Bool)
 
-* You can change the background Color of the Pop Up using ####roundedViewBackgroundColor####. This simply takes a UIColor. 
-* Customise the string you want show using - informationString. IMPORTANT : Keep this to about 5 words so it fits properly into the pop Up. 
-* Customise the Information String Text Color using informationStringTextColor. This take a UIColor. 
-* Change how Long you want THE PopUp on the screen using the durationOnScreen value. This takes a Double. 
-* Current View should always be set to window so it appears above every other view on screen. 
-* The pop up comes with a white background gradient to ensure the Popup shows up with better clarity. The pinterest pop up has something similar. If you don’t want it to show, set showsBackgroundGradient to false. 
-* If your view has a Tab, set isAboveTabBar to true to show the Pop up above the Tab Bar. 
+```
+
+
+In calling the showPopUp function you can change the following parameter values: 
+
+* The Background Color of the Popup using the roundedViewBackgroundColor parameter. This simply takes a UIColor. 
+* The String in the Popup using the informationString parameter. IMPORTANT : Keep this to about 5 words so it fits properly into the pop Up. 
+* The Information String Text Color using the informationStringTextColor parameter. This take a UIColor. 
+* How Long you the pop up is on the screen using the durationOnScreen parameter. This takes a Double. 
+* The Current View parameter should ALWAYS be set to window so it appears above every other view on screen. 
+* The pop up comes with a white background gradient to ensure the Popup shows up with better clarity over the views it appears over. The pinterest pop up has something similar if you take a closer look. If you don’t the gradient to appear, set showsBackgroundGradient parameter to false. 
+* If your view has a Tab Bar, set the isAboveTabBar parameter to true to show the Pop up above the Tab Bar. Otherwise this will appear over the tab bar and may loow unpleasant.
 
 
 
