@@ -2,7 +2,7 @@
 
 An easy to implement custom pop up similar to Pinterest's Pop ups. 
 <div align="center">
-<img src="Pinterest.png" alt="Pinterest"/>
+<img src="https://github.com/mhlangagc/PopUp/blob/master/InformationPopUp/Pinterest.png" alt="Pinterest"/>
 </div>
 ---
 
