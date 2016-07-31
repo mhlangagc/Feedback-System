@@ -1,29 +1,31 @@
 # PopUp
-A simple way to implement a Pop up from the bottom informing the user of any changes within the app or some action they need to do. 
 
-Platform iOS Swift 3.0, XCode 8(Beta) compatible  MIT
-
-# PopUp
-An easy to implement custom transitions.
+An easy to implement custom pop up similar to Pinterest's Pop ups. 
 <div align="center">
-<img src="PopUpLauncher.mov" alt="demo"/>
+<img src="Pinterest.png" alt="demo"/>
 </div>
 ---
 
 ##  Overview:
 
-This library will help easily set up any pop ups that appear from the bottom of the screen to inform the user of any changes/ feedback for some action they just performed. 
+This library will help easily set up any pop ups that appear from the bottom of the screen to inform the user of any changes in the app or give them feedback for some action they just performed. 
 
-Requirements :
-Swift 3.0
-XCode 8 (Beta)
+---
+
+##  Requirements :
+
+<p align="center">
+<img src="https://img.shields.io/badge/platform-iOS-blue.svg?style=flat" alt="Platform iOS" />
+<a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/Swift_3.0-compatible-4BC51D.svg?style=flat" alt="Swift 3.0 compatible" /></a>
+<a href="https://cocoapods.org"><img src='https://img.shields.io/cocoapods/v/TransEasy.svg' /></a>
+<a href="http://mit-license.org"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat" alt="MIT" /></a>
 
 
 ---
 
 ##  How to Setup:
 
-Drag and drop the PopUpLauncher file from the downloaded Project into you Swift 3 Project. Simple and Easy.
+Drag and drop the PopUpLauncher.swift file from the downloaded Project into you Swift 3 Project. Simple and Easy.
 
 ---
 
@@ -31,7 +33,7 @@ Drag and drop the PopUpLauncher file from the downloaded Project into you Swift 
 
 ### Real easy implemenation:
 
-Add these lines to your the view controller (Collection and Table View  Controller works) you want to show the pop in. This will initialise the PopUplauncher to get access to the necessary functions
+Add these lines to your the view controller (Collection and Table View  Controllers also work) you want to show the pop in. This will initialise the PopUplauncher to get access to the necessary function.
 
 ```swift
  lazy var gitPopLauncher: PopUpLauncher = {
@@ -68,7 +70,13 @@ In this function we get access the the keyWindow  and use it’s frame to call t
 
 The Pop up can be customised in the following ways. 
 
-
+* You can change the background Color of the Pop Up using ####roundedViewBackgroundColor####. This simply takes a UIColor. 
+* Customise the string you want show using - informationString. IMPORTANT : Keep this to about 5 words so it fits properly into the pop Up. 
+* Customise the Information String Text Color using informationStringTextColor. This take a UIColor. 
+* Change how Long you want THE PopUp on the screen using the durationOnScreen value. This takes a Double. 
+* Current View should always be set to window so it appears above every other view on screen. 
+* The pop up comes with a white background gradient to ensure the Popup shows up with better clarity. The pinterest pop up has something similar. If you don’t want it to show, set showsBackgroundGradient to false. 
+* If your view has a Tab, set isAboveTabBar to true to show the Pop up above the Tab Bar. 
 
 
 
