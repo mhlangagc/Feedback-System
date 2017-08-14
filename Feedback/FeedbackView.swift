@@ -1,5 +1,5 @@
 //
-//  Feedback.swift
+//  FeedbackView.swift
 //  Feedback
 //
 //  Created by Gugulethu Mhlanga on 2017/08/14.

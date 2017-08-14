@@ -11,7 +11,7 @@
 		4597B1471D4DF6D900DE3BF2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597B1461D4DF6D900DE3BF2 /* HomeViewController.swift */; };
 		4597B14C1D4DF6D900DE3BF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4597B14B1D4DF6D900DE3BF2 /* Assets.xcassets */; };
 		4597B14F1D4DF6D900DE3BF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4597B14D1D4DF6D900DE3BF2 /* LaunchScreen.storyboard */; };
-		C612AC0C1F413139006D4D57 /* FeedbackSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C612AC0B1F413139006D4D57 /* FeedbackSystem.swift */; };
+		C612AC0C1F413139006D4D57 /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C612AC0B1F413139006D4D57 /* FeedbackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,7 +21,7 @@
 		4597B14B1D4DF6D900DE3BF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4597B14E1D4DF6D900DE3BF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4597B1501D4DF6D900DE3BF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C612AC0B1F413139006D4D57 /* FeedbackSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackSystem.swift; sourceTree = "<group>"; };
+		C612AC0B1F413139006D4D57 /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				4597B1441D4DF6D900DE3BF2 /* AppDelegate.swift */,
-				C612AC0B1F413139006D4D57 /* FeedbackSystem.swift */,
+				C612AC0B1F413139006D4D57 /* FeedbackView.swift */,
 				4597B1461D4DF6D900DE3BF2 /* HomeViewController.swift */,
 				4597B14B1D4DF6D900DE3BF2 /* Assets.xcassets */,
 				4597B14D1D4DF6D900DE3BF2 /* LaunchScreen.storyboard */,
@@ -140,7 +140,7 @@
 			files = (
 				4597B1471D4DF6D900DE3BF2 /* HomeViewController.swift in Sources */,
 				4597B1451D4DF6D900DE3BF2 /* AppDelegate.swift in Sources */,
-				C612AC0C1F413139006D4D57 /* FeedbackSystem.swift in Sources */,
+				C612AC0C1F413139006D4D57 /* FeedbackView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,18 +8,18 @@ An easy to implement custom pop up similar to Pinterest's Pop ups.
 
 ##  Overview:
 
-This library will help easily set up any pop ups that appear from the bottom of the screen to inform the user of any changes in the app or give them feedback for some action they just performed. 
+This library will help easily set up any Feedback System that appears from the bottom of the screen to inform the user of any actions/changes that could have taken place in the app.
 
 ---
 
 ##  Requirements :
 
-- Swift 3.0
-- XCode 8 (Beta)
+- Swift 4.0
+- XCode 9 (Beta)
 
 <p align="center">
 <img src="https://img.shields.io/badge/platform-iOS-blue.svg?style=flat" alt="Platform iOS" />
-<a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/Swift_3.0-compatible-4BC51D.svg?style=flat" alt="Swift 3.0 compatible" /></a>
+<a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/Swift_3.0-compatible-4BC51D.svg?style=flat" alt="Swift 4.0 compatible" /></a>
 <a href="http://mit-license.org"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat" alt="MIT" /></a>
 
 
@@ -27,7 +27,7 @@ This library will help easily set up any pop ups that appear from the bottom of 
 
 ##  How to Setup:
 
-Drag and drop the PopUpLauncher.swift file from the downloaded Project into you Swift 3 Project. Simple and Easy.
+Drag and drop the FeedbackView.swift file from the downloaded Project into your Swift 4 Project. Simple and Easy.
 
 ---
 
@@ -35,15 +35,13 @@ Drag and drop the PopUpLauncher.swift file from the downloaded Project into you 
 
 ### Real easy implemenation:
 
-Add these lines to your the view controller (Collection and Table View  Controllers also work) you want to show the pop in. This will initialise the PopUplauncher to get access to the necessary function.
+Add these lines to your the view controller (Collection and Table View  Controllers also work) you want to show the FeedbackView in. This will initialise the FeedbackView to get access to the necessary function.
 
 ```swift
- lazy var gitPopLauncher: PopUpLauncher = {
-    
-        let launcher = PopUpLauncher()
-        return launcher
-    
-    }()
+internal lazy var feedback: FeedbackView = {
+	let feedback = FeedbackView()
+	return feedback
+}()
 
 ```
 
