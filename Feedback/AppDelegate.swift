@@ -3,7 +3,7 @@
 //  Feedback
 //
 //  Created by Gugulethu Mhlanga on 2017/08/14.
-//  Copyright © 2017 Fonk. All rights reserved.
+//  Copyright © 2017 Feedback. All rights reserved.
 //
 
 import UIKit

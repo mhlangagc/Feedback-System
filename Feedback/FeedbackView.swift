@@ -8,29 +8,10 @@
 
 import UIKit
 
-//  Implementation
-//lazy var gitPopLauncher: GitHubPopupLauncher = {
-//    
-//    let launcher = GitHubPopupLauncher()
-//    return launcher
-//    
-//}()
-//
-////  Show Popup
-//func showPopUp() {
-//    
-//    if let window = UIApplication.shared().keyWindow {
-//        
-//        gitPopLauncher.showPopUp(roundedViewBackgroundColor: UIColor(red: 60.0/255.0, green:  80.0/255.0 ,blue: 82.0/255.0, alpha: 1.0), informationString: "Sroll to see more", durationOnScreen: 4.5, currentView: window, showsBackgroundGradient: true, isAboveTabBar: true)
-//    }
-//    
-//    
-//}
-
-final internal class FeedbackView : NSObject {
+final internal class FeedbackView: NSObject {
     
     //  Gradient Background View
-    internal let gradientBackground : UIView = {
+    internal let gradientBackground: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor.clear
         view.layer.masksToBounds = true
@@ -38,15 +19,23 @@ final internal class FeedbackView : NSObject {
     }()
     
     //  PopUpView
-    internal let downloadedPopup : UIView = {
+    internal let roundedView: UIView = {
         let view = UIView()
-        view.layer.cornerRadius = 26.0
+        view.layer.cornerRadius = 58.0 * 0.5
         view.layer.masksToBounds = true
         return view
     }()
+	
+	//	Feedback Icon
+	internal let feedbackIcon: UIImageView = {
+		let image = UIImageView()
+		image.contentMode = .scaleAspectFit
+		image.clipsToBounds = true
+		return image
+	}()
     
     //  Information Label
-    internal let informationLabel : UILabel = {
+    internal let informationLabel: UILabel = {
         let label = UILabel()
         label.textColor = UIColor.white
 		label.font = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight.semibold)
@@ -61,12 +50,12 @@ final internal class FeedbackView : NSObject {
     }
     
     // Show Pop Up
-	internal func showFeedback(roundedViewBackgroundColor: UIColor, feedbackString : String, feedbackStringColor: UIColor, durationOnScreen: Double, currentView: UIView, showsBackgroundGradient: Bool, isAboveTabBar: Bool) {
+	internal func showFeedback(backgroundColor: UIColor, feedbackLabel: String, feedbackLabelColor: UIColor, feedbackIconImage: UIImage, feedbackIconImageTint: UIColor, durationOnScreen: Double, currentView: UIView, showsBackgroundGradient: Bool, isAboveTabBar: Bool) {
 		
 		if let window = UIApplication.shared.keyWindow {
             //  Gradient Background
 			gradientBackground.backgroundColor = UIColor.clear
-            gradientBackground.frame = CGRect(x: 0, y: window.frame.height, width: window.frame.width, height: 160)
+            gradientBackground.frame = CGRect(x: 0, y: window.frame.height, width: window.frame.width, height: 120)
 		
             //  Show Gradient if true
             if showsBackgroundGradient == true {
@@ -77,15 +66,22 @@ final internal class FeedbackView : NSObject {
             window.addSubview(gradientBackground)
 			
             //  Download Popup
-            gradientBackground.addSubview(downloadedPopup)
-            downloadedPopup.frame = CGRect(x: 10, y: 54, width: 355, height: 52)
-            downloadedPopup.backgroundColor = roundedViewBackgroundColor
+            gradientBackground.addSubview(roundedView)
+            roundedView.frame = CGRect(x: 16, y: 38, width: UIScreen.main.bounds.width - 32.0, height: 58.0)
+            roundedView.backgroundColor = backgroundColor
 			
-            //  Information Label
-            downloadedPopup.addSubview(informationLabel)
-            informationLabel.frame = CGRect(x: 30, y: 16, width: 312, height: 20)
-            informationLabel.text = feedbackString
-			informationLabel.textColor = feedbackStringColor
+            //  Information Icon
+            roundedView.addSubview(feedbackIcon)
+			feedbackIcon.image = feedbackIconImage.withRenderingMode(.alwaysTemplate)
+			feedbackIcon.tintColor = feedbackIconImageTint
+            feedbackIcon.frame = CGRect(x: 24, y: 17, width: 24, height: 24)
+			
+			//	Information Label
+			roundedView.addSubview(informationLabel)
+			informationLabel.frame = CGRect(x: 72, y: 17, width: UIScreen.main.bounds.width - 128, height: 24)
+			informationLabel.text = feedbackLabel
+			informationLabel.textColor = feedbackLabelColor
+			informationLabel.font = UIFont.systemFont(ofSize: 18, weight: UIFont.Weight.bold)
 			
             //  #### Timer to Hide it
             Timer.scheduledTimer(timeInterval: durationOnScreen, target: self, selector: #selector(dismissConfimationPopup), userInfo: nil, repeats: false)
@@ -102,17 +98,16 @@ final internal class FeedbackView : NSObject {
         }
     }
     
-    //  Dismiss Views
+    //  Dismiss View
 	@objc private func dismissConfimationPopup() {
         UIView.animate(withDuration: 0.6, delay: 0.0, usingSpringWithDamping: 10.0, initialSpringVelocity: 1, options: .curveLinear, animations: {
 			if let window = UIApplication.shared.keyWindow {
                 self.gradientBackground.frame = CGRect(x: 0, y: window.frame.height, width: window.frame.width, height: 110)
-                //self.downloadedPopup.frame = CGRect(x: 10, y: window.frame.height, width: window.frame.width - 20, height: 90)
             }
 		}, completion: nil)
     }
 
-    //  Gradient Layer Setup
+    //  Gradient 
     private func backgroundGradientLayer(view: UIView, overLayView: UIView) {
         let gradient = CAGradientLayer()
         gradient.frame = overLayView.frame
