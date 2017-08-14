@@ -1,4 +1,4 @@
-# PopUp
+# Feedback Systems
 
 An easy to implement custom pop up similar to Pinterest's Pop ups. 
 <div align="center">
