@@ -1,6 +1,6 @@
 # Feedback System
 
-An easy to implement custom pop up similar to Pinterest's Pop ups. 
+An easy to implement custom pop up similar to Pinterest's Feedback System. 
 <div align="center">
 <img src="https://github.com/mhlangagc/PopUp/blob/master/InformationPopUp/Pinterest.png" alt="Pinterest"/>
 </div>
