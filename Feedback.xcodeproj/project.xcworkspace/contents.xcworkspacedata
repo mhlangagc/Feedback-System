@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:InformationPopUp.xcodeproj">
+      location = "self:/Users/gugulethu/Desktop/PopUp/Feedback.xcodeproj">
    </FileRef>
 </Workspace>
