@@ -4,32 +4,29 @@ An easy to implement custom pop up similar to Pinterest's Feedback System.
 <div align="center">
 <img src="https://github.com/mhlangagc/Feedback-System/blob/master/Feedback/ExampleImage.png" alt="Feedback-System"/>
 </div>
----
+
 
 ##  Overview:
 
 This library will help easily set up any Feedback System that appears from the bottom of the screen to inform the user of any actions/changes that could have taken place in the app.
 
----
 
 ##  Requirements :
 
 - Swift 4.0
-- XCode 9 (Beta)
+- XCode 9 (Beta-5)
 
 <p align="center">
 <img src="https://img.shields.io/badge/platform-iOS-blue.svg?style=flat" alt="Platform iOS" />
 <a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/Swift_4.0-compatible-4BC51D.svg?style=flat" alt="Swift 4.0 compatible" /></a>
 <a href="http://mit-license.org"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat" alt="MIT" /></a>
+</p>
 
-
----
 
 ##  How to Setup:
 
 Drag and drop the FeedbackView.swift file from the downloaded Project into your Swift 4 Project. Simple and Easy.
 
----
 
 ##  How to Use:
 
